@@ -2,20 +2,20 @@
 
 ## 📊 Progress
 
-- Overall Progress: **15%**
-- Current Level: 🌿 Beginner II
-- Exercises Solved: **30 / 200**
+- Overall Progress: **20%**
+- Current Level: 📘 Junior SQL
+- Exercises Solved: **40 / 200**
 - Average Accuracy: **90%**
 
 ## 📚 Modules
 
 - [x] Module 1 — Basics
-- [ ] Module 2 — WHERE (in progress)
-- [ ] Module 3 — Aggregation
-- [ ] Module 4 — GROUP BY
-- [ ] Module 5 — JOIN
-- [ ] Module 6 — Subqueries
-- [ ] Module 7 — CTE
-- [ ] Module 8 — Window Functions
-- [ ] Module 9 — Data Modification
+- [x] Module 2 — WHERE
+- [ ] Module 3 — IN, BETWEEN, LIKE
+- [ ] Module 4 — ORDER BY
+- [ ] Module 5 — Aggregation
+- [ ] Module 6 — GROUP BY
+- [ ] Module 7 — JOIN
+- [ ] Module 8 — Subqueries
+- [ ] Module 9 — Window Functions
 - [ ] Module 10 — Final Project
