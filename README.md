@@ -1,14 +1,16 @@
-# sql-learning
-My journey of learning SQL from beginner to advanced.
+# SQL Learning
 
-## Progress
+## 📊 Progress
 
-- Progress: 5%
-- Level: Beginner I
+- Overall Progress: **10%**
+- Current Level: 🌿 Beginner II
+- Exercises Solved: **20 / 200**
+- Average Accuracy: **95%**
+- GitHub Commits: **2**
 
-## Modules
+## 📚 Modules
 
-- [ ] 01 Basics
+- [x] 01 Basics
 - [ ] 02 Filtering
 - [ ] 03 Aggregation
 - [ ] 04 GROUP BY
@@ -18,7 +20,3 @@ My journey of learning SQL from beginner to advanced.
 - [ ] 08 Window Functions
 - [ ] 09 Data Modification
 - [ ] 10 Final Project
-
-## Solved Exercises
-
-10

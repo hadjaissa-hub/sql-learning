@@ -19,3 +19,22 @@ FROM employees;
 
 SELECT first_name, age
 FROM employees;
+
+
+## Topics
+
+- SELECT
+- FROM
+- SELECT *
+- Selecting multiple columns
+- AS (aliases)
+- DISTINCT
+
+## Completed
+
+- 20 exercises
+- Accuracy: 95%
+
+## Common mistakes
+
+- Misspelled column names (example: deprtment → department)
