@@ -2,21 +2,20 @@
 
 ## 📊 Progress
 
-- Overall Progress: **10%**
+- Overall Progress: **15%**
 - Current Level: 🌿 Beginner II
-- Exercises Solved: **20 / 200**
-- Average Accuracy: **95%**
-- GitHub Commits: **2**
+- Exercises Solved: **30 / 200**
+- Average Accuracy: **90%**
 
 ## 📚 Modules
 
-- [x] 01 Basics
-- [ ] 02 Filtering
-- [ ] 03 Aggregation
-- [ ] 04 GROUP BY
-- [ ] 05 JOIN
-- [ ] 06 Subqueries
-- [ ] 07 CTE
-- [ ] 08 Window Functions
-- [ ] 09 Data Modification
-- [ ] 10 Final Project
+- [x] Module 1 — Basics
+- [ ] Module 2 — WHERE (in progress)
+- [ ] Module 3 — Aggregation
+- [ ] Module 4 — GROUP BY
+- [ ] Module 5 — JOIN
+- [ ] Module 6 — Subqueries
+- [ ] Module 7 — CTE
+- [ ] Module 8 — Window Functions
+- [ ] Module 9 — Data Modification
+- [ ] Module 10 — Final Project
