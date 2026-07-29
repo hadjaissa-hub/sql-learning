@@ -27,3 +27,26 @@ WHERE department = 'IT'
 SELECT *
 FROM employees
 WHERE department NOT IN ('IT', 'HR');
+
+
+
+## BETWEEN
+
+`BETWEEN` используется для проверки, находится ли значение в диапазоне.
+
+Example:
+
+```sql
+SELECT *
+FROM employees
+WHERE salary BETWEEN 3500 AND 5000;
+
+
+NOT BETWEEN
+Используется, когда значение должно находиться за пределами диапазона.
+
+SELECT *
+FROM employees
+WHERE salary NOT BETWEEN 3500 AND 5000;
+
+

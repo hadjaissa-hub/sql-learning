@@ -1,11 +1,9 @@
-# SQL Learning
-
 ## 📊 Progress
 
-- Overall Progress: **20%**
+- Overall Progress: **25%**
 - Current Level: 📘 Junior SQL
-- Exercises Solved: **40 / 200**
-- Average Accuracy: **90%**
+- Exercises Solved: **65 / 200**
+- Last Block: **10/10**
 
 ## 📚 Modules
 
