@@ -105,3 +105,57 @@ WHERE age BETWEEN 25 AND 40
 AND department IN ('IT', 'HR', 'Sales')
 AND salary BETWEEN 3500 AND 5000;
 
+Задача 1
+SELECT *
+FROM employees
+WHERE first_name LIKE 'A%';
+
+Задача 2
+SELECT * 
+FROM employees
+WHERE first_name LIKE '%a';
+
+Задача 3
+SELECT *
+FROM employees
+WHERE first_name LIKE '%an%';
+
+Задача 4
+SELECT *
+FROM employees
+WHERE first_name LIKE '%e%';
+
+Задача 5
+SELECT *
+FROM employees
+WHERE first_name NOT LIKE 'A%';
+
+Задача 6
+SELECT *
+FROM employees
+WHERE last_name LIKE 'M%';
+
+Задача 7
+SELECT *
+FROM employees
+WHERE last_name LIKE '%n';
+
+Задача 8
+SELECT *
+FROM employees
+WHERE department LIKE '%a%';
+
+Задача 9
+SELECT *
+FROM employees
+WHERE first_name LIKE 'A%'
+AND first_name LIKE '%a';
+
+Задача 10
+SELECT * 
+FROM employees
+WHERE first_name LIKE 'A%'
+AND first_name LIKE '%e%'
+AND department IN ('IT', 'HR', 'Sales');
+
+

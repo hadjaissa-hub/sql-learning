@@ -50,3 +50,12 @@ FROM employees
 WHERE salary NOT BETWEEN 3500 AND 5000;
 
 
+### LIKE / NOT LIKE
+LIKE is used to search text using a pattern.
+
+SELECT *
+FROM employees
+WHERE first_name LIKE 'A%';
+
+
+
