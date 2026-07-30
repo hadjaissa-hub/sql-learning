@@ -1,34 +1,51 @@
+# SQL Learning Journey
+
+Learning SQL from scratch through practical exercises and projects.
+
 ## 📊 Progress
 
-- Overall Progress: **36%**
-- Current Level: 📘 Junior SQL
-- Exercises Solved: **96 / 200**
-- Average Accuracy: **91%**
-- Current Module: **04 — ORDER BY & LIMIT**
+| Metric | Value |
+|--------|------:|
+| Overall Progress | **40%** |
+| Current Level | 📘 Junior SQL+ |
+| Modules Completed | **4 / 10** |
+| Exercises Solved | **106 / 200** |
+| Average Accuracy | **92%** |
 
-## 📚 Modules
+---
 
-- [x] Module 1 — Basics
+## ✅ Completed Modules
+
+- [x] Module 1 — SQL Basics
 - [x] Module 2 — WHERE
 - [x] Module 3 — IN, BETWEEN, LIKE
-- [ ] Module 4 — ORDER BY & LIMIT
-- [ ] Module 5 — Aggregation
-- [ ] Module 6 — GROUP BY
-- [ ] Module 7 — JOIN
-- [ ] Module 8 — Subqueries
-- [ ] Module 9 — Window Functions
-- [ ] Module 10 — Final Project
+- [x] Module 4 — ORDER BY & LIMIT
 
-## 🎯 Skills
+## 🚧 Current Module
 
-| Skill | Rating |
-|-------|:------:|
-| SQL Logic | ⭐⭐⭐⭐⭐ |
-| SQL Syntax | ⭐⭐⭐⭐☆ |
-| Readability | ⭐⭐⭐⭐⭐ |
-| Speed | ⭐⭐⭐⭐☆ |
+- [ ] Module 5 — Aggregate Functions
 
-## 📈 Personal Best
+---
 
-- Best score: **10/10**
-- Current streak: **96 solved exercises**
+## 🛠 Skills
+
+- SELECT
+- WHERE
+- AS
+- DISTINCT
+- IN / NOT IN
+- BETWEEN
+- LIKE
+- ORDER BY
+- LIMIT
+
+---
+
+## 📂 Repository Structure
+
+```text
+modules/
+projects/
+datasets/
+notes/
+```

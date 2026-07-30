@@ -67,3 +67,13 @@ This means:
 
 - highest salaries first;
 - if salaries are equal, sort alphabetically by `first_name`.
+
+
+## Module 4 — ORDER BY & LIMIT
+
+### Completed
+
+- ORDER BY
+- ASC / DESC
+- Multiple column sorting
+- LIMIT
