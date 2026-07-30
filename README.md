@@ -1,9 +1,9 @@
 ## 📊 Progress
 
-- Overall Progress: **30%**
+- Overall Progress: **33%**
 - Current Level: 📘 Junior SQL
-- Exercises Solved: **76 / 200**
-- Last Test: **1/1**
+- Exercises Solved: **86 / 200**
+- Average Accuracy: **91%**
 - Current Module: **04 — ORDER BY**
 
 ## 📚 Modules
@@ -18,3 +18,10 @@
 - [ ] Module 8 — Subqueries
 - [ ] Module 9 — Window Functions
 - [ ] Module 10 — Final Project
+
+## 🎯 Skills
+
+- SQL Logic: ⭐⭐⭐⭐⭐
+- SQL Syntax: ⭐⭐⭐⭐☆
+- Readability: ⭐⭐⭐⭐⭐
+- Speed: ⭐⭐⭐⭐☆
