@@ -1,10 +1,10 @@
 ## 📊 Progress
 
-- Overall Progress: **33%**
+- Overall Progress: **36%**
 - Current Level: 📘 Junior SQL
-- Exercises Solved: **86 / 200**
+- Exercises Solved: **96 / 200**
 - Average Accuracy: **91%**
-- Current Module: **04 — ORDER BY**
+- Current Module: **04 — ORDER BY & LIMIT**
 
 ## 📚 Modules
 
@@ -21,7 +21,14 @@
 
 ## 🎯 Skills
 
-- SQL Logic: ⭐⭐⭐⭐⭐
-- SQL Syntax: ⭐⭐⭐⭐☆
-- Readability: ⭐⭐⭐⭐⭐
-- Speed: ⭐⭐⭐⭐☆
+| Skill | Rating |
+|-------|:------:|
+| SQL Logic | ⭐⭐⭐⭐⭐ |
+| SQL Syntax | ⭐⭐⭐⭐☆ |
+| Readability | ⭐⭐⭐⭐⭐ |
+| Speed | ⭐⭐⭐⭐☆ |
+
+## 📈 Personal Best
+
+- Best score: **10/10**
+- Current streak: **96 solved exercises**

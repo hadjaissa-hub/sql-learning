@@ -37,3 +37,33 @@ SELECT *
 FROM employees
 WHERE salary > 3500
 ORDER BY salary DESC;
+
+## Sorting by Multiple Columns
+
+SQL allows sorting by more than one column.
+
+Example:
+
+```sql
+SELECT *
+FROM employees
+ORDER BY department ASC, salary DESC;
+```
+
+How it works:
+
+1. Sort by `department` (A → Z).
+2. Inside each department, sort by `salary` (highest → lowest).
+
+Another example:
+
+```sql
+SELECT *
+FROM employees
+ORDER BY salary DESC, first_name ASC;
+```
+
+This means:
+
+- highest salaries first;
+- if salaries are equal, sort alphabetically by `first_name`.
