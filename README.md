@@ -1,22 +1,30 @@
+# SQL Learning Journey
+
 ## 📊 Progress
 
 | Metric | Value |
 |--------|------:|
-| Overall Progress | **48%** |
+| Overall Progress | **50%** |
 | Current Level | 📘 Junior SQL+ |
-| Modules Completed | **4 / 10** |
-| Current Module | **5 — Aggregate Functions** |
-| Exercises Solved | **146 / 200** |
-| Practice Progress | **73% (146/200)** |
+| Modules Completed | **5 / 10** |
+| Exercises Solved | **156 / 200** |
+| Practice Progress | **78% (156/200)** |
 | Average Accuracy | **94%** |
 
-## 🎯 Aggregate Functions Progress
+---
 
-- [x] COUNT()
-- [x] SUM()
-- [x] AVG()
-- [x] MIN()
-- [ ] MAX()
-- [ ] Multiple Aggregate Functions
-- [ ] GROUP BY
-- [ ] HAVING
+## ✅ Completed Modules
+
+- [x] Module 1 — SQL Basics
+- [x] Module 2 — WHERE
+- [x] Module 3 — IN, BETWEEN, LIKE
+- [x] Module 4 — ORDER BY & LIMIT
+- [x] Module 5 — Aggregate Functions
+
+## 🚧 Next Modules
+
+- [ ] Module 6 — GROUP BY
+- [ ] Module 7 — JOIN
+- [ ] Module 8 — Subqueries
+- [ ] Module 9 — Window Functions
+- [ ] Module 10 — Final Project

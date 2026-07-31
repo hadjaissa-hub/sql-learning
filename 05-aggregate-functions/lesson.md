@@ -109,3 +109,29 @@ Using an alias:
 SELECT MIN(salary) AS minimum_salary
 FROM employees;
 ```
+
+# Module Summary
+
+## Learned Functions
+
+- COUNT()
+- SUM()
+- AVG()
+- MIN()
+- MAX()
+
+## Combined Aggregates
+
+Multiple aggregate functions can be used in one query.
+
+Example:
+
+```sql
+SELECT
+    COUNT(*) AS total_employees,
+    SUM(salary) AS total_salary,
+    AVG(salary) AS average_salary,
+    MIN(salary) AS minimum_salary,
+    MAX(salary) AS maximum_salary
+FROM employees;
+```
