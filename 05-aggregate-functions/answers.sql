@@ -157,4 +157,76 @@ WHERE department = 'HR' ;
 
 
 
+🟢 Базовые задачи
+Задача 1
+Посчитать среднюю зарплату всех сотрудников.
+Задача 2
+Посчитать среднюю зарплату сотрудников отдела IT.
+Задача 3
+Посчитать средний возраст сотрудников.
+Задача 4
+Посчитать средний возраст сотрудников отдела HR.
+Задача 5
+Посчитать среднюю зарплату сотрудников старше 30 лет.
+🔵 Практические задачи
+Задача 6
+Посчитать среднюю зарплату сотрудников с возрастом от 25 до 40 лет.
+Задача 7
+Посчитать среднюю зарплату сотрудников, чьи имена начинаются с A.
+Задача 8
+Посчитать среднюю зарплату сотрудников не из отдела Marketing.
+Задача 9
+Посчитать средний возраст сотрудников из отделов IT и Sales.
+⭐ Задача 10
+Вернуть результат с названием столбца:
+average_it_salary
+который содержит среднюю зарплату сотрудников отдела IT.
+Используй AS.
 
+Задача 1
+SELECT AVG(salary)
+FROM employees ;
+
+Задача 2
+SELECT AVG(salary)
+FROM employees
+WHERE department = 'IT' ;
+
+Задача 3
+SELECT AVG(age)
+FROM employees ;
+
+Задача 4
+SELECT AVG(age)
+FROM employees
+WHERE department = 'HR' ;
+
+Задача 5
+SELECT AVG(salary)
+FROM employees
+WHERE age > 30 ;
+
+Задача 6
+SELECT AVG(salary)
+FROM employees
+WHERE age BETWEEN 25 AND 40 ;
+
+Задача 7
+SELECT AVG(salary)
+FROM employees
+WHERE first_name LIKE 'A%' ;
+
+Задача 8
+SELECT AVG(salary)
+FROM employees
+WHERE department <> 'Marketing' ;
+
+Задача 9
+SELECT AVG(age)
+FROM employees
+WHERE department IN ('IT', 'Sales') ;
+
+Задача 10
+SELECT AVG(salary) AS average_it_salary
+FROM employees
+WHERE department = 'IT' ;

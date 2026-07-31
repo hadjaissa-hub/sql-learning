@@ -42,3 +42,38 @@ Using an alias:
 SELECT SUM(salary) AS total_salary
 FROM employees;
 ```
+
+# AVG()
+
+`AVG()` returns the average value of a numeric column.
+
+## Syntax
+
+```sql
+SELECT AVG(salary)
+FROM employees;
+```
+
+Average salary in IT:
+
+```sql
+SELECT AVG(salary)
+FROM employees
+WHERE department = 'IT';
+```
+
+Average age:
+
+```sql
+SELECT AVG(age)
+FROM employees;
+```
+
+Using an alias:
+
+```sql
+SELECT AVG(salary) AS average_salary
+FROM employees;
+```
+
+

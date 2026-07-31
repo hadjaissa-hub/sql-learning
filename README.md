@@ -2,22 +2,21 @@
 
 | Metric | Value |
 |--------|------:|
-| Overall Progress | **44%** |
+| Overall Progress | **46%** |
 | Current Level | 📘 Junior SQL+ |
 | Modules Completed | **4 / 10** |
 | Current Module | **5 — Aggregate Functions** |
-| Exercises Solved | **126 / 200** |
-| Practice Progress | **63% (126/200)** |
-| Average Accuracy | **93%** |
+| Exercises Solved | **136 / 200** |
+| Practice Progress | **68% (136/200)** |
+| Average Accuracy | **94%** |
 
-## 🎯 Current Focus
-
-Aggregate Functions:
+## 🎯 Aggregate Functions Progress
 
 - [x] COUNT()
 - [x] SUM()
-- [ ] AVG()
+- [x] AVG()
 - [ ] MIN()
 - [ ] MAX()
+- [ ] Multiple Aggregate Functions
 - [ ] GROUP BY
 - [ ] HAVING
