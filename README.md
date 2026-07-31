@@ -1,18 +1,17 @@
 # SQL Learning Journey
 
-Learning SQL from scratch through practical exercises and projects.
+Learning SQL through practical exercises and real-world projects.
 
 ## 📊 Progress
 
 | Metric | Value |
 |--------|------:|
-| Overall Progress | **40%** |
+| Overall Progress | **42%** |
 | Current Level | 📘 Junior SQL+ |
 | Modules Completed | **4 / 10** |
-| Exercises Solved | **106 / 200** |
-| Average Accuracy | **92%** |
-
----
+| Current Module | **5 — Aggregate Functions** |
+| Exercises Solved | **116 / 200** |
+| Average Accuracy | **93%** |
 
 ## ✅ Completed Modules
 
@@ -20,32 +19,9 @@ Learning SQL from scratch through practical exercises and projects.
 - [x] Module 2 — WHERE
 - [x] Module 3 — IN, BETWEEN, LIKE
 - [x] Module 4 — ORDER BY & LIMIT
-
-## 🚧 Current Module
-
 - [ ] Module 5 — Aggregate Functions
-
----
-
-## 🛠 Skills
-
-- SELECT
-- WHERE
-- AS
-- DISTINCT
-- IN / NOT IN
-- BETWEEN
-- LIKE
-- ORDER BY
-- LIMIT
-
----
-
-## 📂 Repository Structure
-
-```text
-modules/
-projects/
-datasets/
-notes/
-```
+- [ ] Module 6 — GROUP BY
+- [ ] Module 7 — JOIN
+- [ ] Module 8 — Subqueries
+- [ ] Module 9 — Window Functions
+- [ ] Module 10 — Final Project
