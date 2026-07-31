@@ -17,3 +17,28 @@ SELECT COUNT(*)
 FROM employees;
 ```
 
+# SUM()
+
+`SUM()` calculates the total of numeric values.
+
+## Syntax
+
+```sql
+SELECT SUM(salary)
+FROM employees;
+```
+
+Calculate the total salary of IT employees:
+
+```sql
+SELECT SUM(salary)
+FROM employees
+WHERE department = 'IT';
+```
+
+Using an alias:
+
+```sql
+SELECT SUM(salary) AS total_salary
+FROM employees;
+```
