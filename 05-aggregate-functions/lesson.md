@@ -77,3 +77,35 @@ FROM employees;
 ```
 
 
+# MIN()
+
+`MIN()` returns the smallest value from a column.
+
+## Syntax
+
+```sql
+SELECT MIN(salary)
+FROM employees;
+```
+
+Minimum salary in IT:
+
+```sql
+SELECT MIN(salary)
+FROM employees
+WHERE department = 'IT';
+```
+
+Youngest employee:
+
+```sql
+SELECT MIN(age)
+FROM employees;
+```
+
+Using an alias:
+
+```sql
+SELECT MIN(salary) AS minimum_salary
+FROM employees;
+```
