@@ -1,16 +1,14 @@
-# Module 6 — GROUP BY
+# GROUP BY
 
-## Goal
+## What is GROUP BY?
 
-Learn how to group rows and calculate statistics for each group.
+`GROUP BY` combines rows with the same value into groups.
+
+Instead of one result for the whole table, SQL returns one result for each group.
 
 ---
 
-# GROUP BY
-
-`GROUP BY` groups rows that have the same value in one or more columns.
-
-Example:
+## Basic Syntax
 
 ```sql
 SELECT
@@ -18,3 +16,52 @@ SELECT
     COUNT(*) AS total_employees
 FROM employees
 GROUP BY department;
+```
+
+---
+
+## Example with Multiple Aggregate Functions
+
+```sql
+SELECT
+    department,
+    COUNT(*) AS total_employees,
+    SUM(salary) AS total_salary,
+    AVG(salary) AS average_salary,
+    MIN(salary) AS minimum_salary,
+    MAX(salary) AS maximum_salary
+FROM employees
+GROUP BY department;
+```
+
+---
+
+## Important Rule
+
+Every selected column must:
+
+- appear inside an aggregate function;
+
+or
+
+- be listed in `GROUP BY`.
+
+Correct:
+
+```sql
+SELECT
+    department,
+    AVG(salary)
+FROM employees
+GROUP BY department;
+```
+
+Incorrect:
+
+```sql
+SELECT
+    department,
+    salary
+FROM employees
+GROUP BY department;
+```

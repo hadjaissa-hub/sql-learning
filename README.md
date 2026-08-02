@@ -2,18 +2,22 @@
 
 | Metric | Value |
 |--------|------:|
-| Overall Progress | **54%** |
+| Overall Progress | **58%** |
 | Current Level | 📘 Junior SQL+ |
-| Modules Completed | **5 / 10** |
-| Current Module | **6 — GROUP BY** |
-| Exercises Solved | **166 / 200** |
-| Practice Progress | **83% (166/200)** |
-| Average Accuracy | **94%** |
+| Modules Completed | **5** |
+| Current Module | **6 — GROUP BY / HAVING** |
+| Exercises Solved | **178 / 200** |
+| Practice Progress | **89% (178/200)** |
+| Average Accuracy | **95%** |
 
-## 🎯 Current Focus
+## ✅ Skills
 
+- [x] SELECT
+- [x] WHERE
+- [x] ORDER BY
+- [x] LIMIT
 - [x] Aggregate Functions
-- [ ] GROUP BY
+- [x] GROUP BY
 - [ ] HAVING
 - [ ] JOIN
 - [ ] Subqueries

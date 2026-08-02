@@ -134,3 +134,158 @@ SELECT
              MAX(salary) AS maximum_salary
 FROM employees
 WHERE department = 'IT' ;
+
+
+
+# HERE STARTS SECOND BLOCK OF EXERCICES!!!
+🟢 Базовые задачи
+Задача 1
+Для каждого отдела вывести:
+название отдела;
+количество сотрудников.
+Задача 2
+Для каждого отдела вывести:
+название отдела;
+среднюю зарплату.
+Задача 3
+Для каждого отдела вывести:
+название отдела;
+сумму зарплат.
+Задача 4
+Для каждого отдела вывести:
+название отдела;
+минимальную зарплату.
+Задача 5
+Для каждого отдела вывести:
+название отдела;
+максимальную зарплату.
+🔵 Практические задачи
+Задача 6
+Для каждого отдела вывести:
+название отдела;
+средний возраст.
+Задача 7
+Для каждого отдела вывести:
+название отдела;
+минимальный возраст;
+максимальный возраст.
+Задача 8
+Для каждого отдела вывести:
+название отдела;
+количество сотрудников;
+среднюю зарплату.
+Задача 9
+Для каждого отдела вывести:
+название отдела;
+сумму зарплат;
+минимальную зарплату;
+максимальную зарплату.
+⭐ Задача 10 (как на собеседовании)
+Руководитель попросил отчёт по каждому отделу.
+Для каждого отдела вывести:
+название отдела;
+количество сотрудников;
+общую сумму зарплат;
+среднюю зарплату;
+минимальную зарплату;
+максимальную зарплату.
+Используй понятные псевдонимы (AS).
+🎯 Две реальные задачи
+💼 Задача A
+Нужно узнать, в каком отделе работает больше всего сотрудников.
+Пока используй только GROUP BY и COUNT(). (На следующем уроке с HAVING и позже с сортировкой мы сделаем это ещё красивее.)
+💼 Задача B
+Нужно подготовить отчёт для финансового отдела:
+«Покажи общую сумму зарплат по каждому отделу.»
+
+Задача 1
+SELECT
+              department,
+              COUNT(*) AS total_employees
+FROM employees
+GROUP BY department;
+
+Задача 2
+SELECT
+             department,
+             AVG(salary) AS average_salary
+FROM employees
+GROUP BY department ;
+
+Задача 3
+SELECT 
+             department,
+             SUM(salary) AS total_salary
+FROM employees
+GROUP BY department ;
+
+Задача 4
+SELECT 
+             department,
+             MIN(salary) AS lowest_salary
+FROM employees
+GROUP BY department ;
+
+Задача 5
+SELECT 
+             department,
+             MAX(salary) AS highest_salary
+FROM employees
+GROUP BY department ;
+
+Задача 6
+SELECT 
+             department,
+             AVG(age) AS average_age
+FROM employees
+GROUP BY department ;
+
+Задача 7
+SELECT 
+             department,
+             MIN(age) AS youngest_employee,
+             MAX(age) AS oldest_employee
+FROM employees
+GROUP BY department ;
+
+Задача 8
+SELECT 
+             department,
+             COUNT(*) AS total_employees,
+             AVG(salary) AS average_salary
+FROM employees
+GROUP BY department ;
+
+Задача 9
+SELECT
+              department,
+              SUM(salary) AS total_salary,
+              MIN(salary) AS lowest_salary,
+              MAX(salary) AS hightest_salary
+FROM employees
+GROUP BY department ;
+
+Задача 10
+SELECT
+             department,
+             COUNT(*) AS total_employees,
+             SUM(salary) AS total_salary,
+             AVG(salary) AS average_salary,
+             MIN(salary) AS lowest_salary,
+             MAX(salary) AS highest_salary
+FROM employees
+GROUP BY department ;
+
+Задача A
+SELECT 
+             department,
+             COUNT(*) AS total_employees
+FROM employees
+GROUP BY department ;
+
+Задача B
+SELECT 
+             department,
+             SUM(salary) AS total_salary
+FROM employees
+GROUP BY department ;
