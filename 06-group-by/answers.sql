@@ -289,3 +289,164 @@ SELECT
              SUM(salary) AS total_salary
 FROM employees
 GROUP BY department ;
+
+
+
+
+# HERE STARTS SECOND BLOCK OF EXERCICES!!!
+🟢 Базовые задачи
+Задача 1
+Для каждого отдела вывести количество сотрудников.
+Оставить только отделы, где сотрудников больше 2.
+Задача 2
+Для каждого отдела вывести среднюю зарплату.
+Оставить только отделы, где средняя зарплата больше 4000.
+Задача 3
+Для каждого отдела вывести сумму зарплат.
+Оставить только отделы, где сумма зарплат больше 20000.
+Задача 4
+Для каждого отдела вывести максимальную зарплату.
+Оставить только отделы, где максимальная зарплата больше 5000.
+Задача 5
+Для каждого отдела вывести минимальный возраст.
+Оставить только отделы, где минимальный возраст меньше 25.
+🔵 Практические задачи
+Задача 6
+Рассмотреть только сотрудников старше 25 лет.
+Для каждого отдела вывести количество сотрудников.
+Оставить только отделы, где таких сотрудников больше 3.
+Задача 7
+Рассмотреть только сотрудников отдела IT или HR.
+Для каждого отдела вывести среднюю зарплату.
+Оставить только отделы, где средняя зарплата больше 4500.
+Задача 8
+Рассмотреть только сотрудников с зарплатой больше 3000.
+Для каждого отдела вывести:
+количество сотрудников;
+среднюю зарплату.
+Оставить только отделы, где сотрудников больше 2.
+Задача 9
+Для каждого отдела вывести:
+минимальную зарплату;
+максимальную зарплату.
+Оставить только отделы, где максимальная зарплата больше 4500.
+⭐ Задача 10 (как на собеседовании)
+Нужно подготовить отчёт.
+Рассмотреть только сотрудников:
+возраст от 25 до 40;
+зарплата больше 3500.
+Для каждого отдела вывести:
+количество сотрудников;
+среднюю зарплату;
+сумму зарплат.
+Оставить только отделы, где сотрудников больше 2.
+💼 Реальные задачи
+Задача A
+Найти отделы, где средняя зарплата выше 4500.
+Задача B
+Найти отделы, где работает не менее 5 сотрудников.
+
+Задача 1
+SELECT 
+             department,
+             COUNT(*) AS total_employees
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 2 ;
+
+Задача 2
+SELECT 
+             department,
+             AVG(salary) AS average_salary
+FROM employees
+GROUP BY department
+HAVING AVG(salary) > 4000 ;
+
+Задача 3
+SELECT 
+             department,
+             SUM(salary) AS total_salaries
+FROM employees
+GROUP BY department
+HAVING SUM(salary) > 20000 ;
+
+Задача 4
+SELECT 
+              department,
+              MAX(salary) AS biggest_salary
+FROM employees
+GROUP BY department
+HAVING MAX(salary) > 5000 ;
+
+Задача 5
+SELECT 
+             department,
+             MIN(age) AS youngest_employee
+FROM employees
+GROUP BY department
+HAVING MIN(age) < 25 ;
+
+Задача 6
+SELECT 
+             department,
+             COUNT(*) AS total_employees
+FROM employees
+WHERE age > 25
+GROUP BY department
+HAVING COUNT(*) > 3 ;
+
+Задача 7
+SELECT 
+             department,
+             AVG(salary) AS average_salary
+FROM employees
+WHERE department IN ('IT', 'HR')
+GROUP BY department
+HAVING AVG(salary) > 4500 ;
+
+Задача 8
+SELECT 
+              department,
+              COUNT(*) AS total_employees,
+              AVG(salary) AS average_salary
+FROM employees
+WHERE salary > 3000
+GROUP BY department 
+HAVING COUNT(*) > 2 ;
+
+Задача 9
+SELECT 
+             department,
+             MIN(salary) AS lowest_salary,
+             MAX(salary) AS highest_salary
+FROM employees
+GROUP BY department
+HAVING MAX(salary) > 4500 ; 
+
+Задача 10
+SELECT 
+             department,
+             COUNT(*) AS total_employees,
+             AVG(salary) AS average_salary,
+             SUM(salary) AS total_salaries
+FROM employees
+WHERE age BETWEEN 25 AND 40
+AND salary > 3500
+GROUP BY department
+HAVING COUNT(*) > 2 ;
+
+Задача A
+SELECT 
+             department, 
+             AVG(salary) AS average_salary
+FROM employees
+GROUP BY department
+HAVING AVG(salary) > 4500 ;
+
+Задача B
+SELECT 
+             department,
+             COUNT(*) AS total_employees
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 5 ;

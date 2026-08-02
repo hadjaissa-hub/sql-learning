@@ -1,67 +1,50 @@
-# GROUP BY
+# Module 6 Summary
 
-## What is GROUP BY?
+## Topics Covered
 
-`GROUP BY` combines rows with the same value into groups.
-
-Instead of one result for the whole table, SQL returns one result for each group.
-
----
-
-## Basic Syntax
-
-```sql
-SELECT
-    department,
-    COUNT(*) AS total_employees
-FROM employees
-GROUP BY department;
-```
+- GROUP BY
+- COUNT()
+- SUM()
+- AVG()
+- MIN()
+- MAX()
+- HAVING
 
 ---
 
-## Example with Multiple Aggregate Functions
+## Example
 
 ```sql
 SELECT
     department,
     COUNT(*) AS total_employees,
-    SUM(salary) AS total_salary,
     AVG(salary) AS average_salary,
-    MIN(salary) AS minimum_salary,
-    MAX(salary) AS maximum_salary
+    SUM(salary) AS total_salary
 FROM employees
-GROUP BY department;
+GROUP BY department
+HAVING COUNT(*) >= 5;
 ```
 
 ---
 
-## Important Rule
+## Key Difference
 
-Every selected column must:
+WHERE → filters rows before grouping.
 
-- appear inside an aggregate function;
+HAVING → filters groups after grouping.
 
-or
+---
 
-- be listed in `GROUP BY`.
+## Best Practices
 
-Correct:
+- Use meaningful aliases.
+- Read conditions carefully (`>`, `>=`, `<`, `<=`).
+- Keep queries formatted consistently.
 
-```sql
-SELECT
-    department,
-    AVG(salary)
-FROM employees
-GROUP BY department;
-```
+---
 
-Incorrect:
+## Module Status
 
-```sql
-SELECT
-    department,
-    salary
-FROM employees
-GROUP BY department;
-```
+✅ Completed
+
+Accuracy: 95%
