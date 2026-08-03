@@ -1,26 +1,22 @@
 ## 📈 Progress
 
-- Overall Progress: **72%**
+- Overall Progress: **75%**
 - Current Level: 🟢 Confident Junior SQL
-- Exercises Solved: **226 / 250**
-- Average Accuracy: **95–96%**
+- Exercises Solved: **238 / 250**
+- Average Accuracy: **95%**
 
 ## 📚 Modules
 
 - [x] Module 1 — SQL Basics
 - [x] Module 2 — WHERE
-- [x] Module 3 — IN, BETWEEN, LIKE
-- [x] Module 4 — ORDER BY & LIMIT
+- [x] Module 3 — Filtering (IN, BETWEEN, LIKE)
+- [x] Module 4 — Sorting (ORDER BY, LIMIT)
 - [x] Module 5 — Aggregate Functions
 - [x] Module 6 — GROUP BY & HAVING
 - [x] Module 7 — INNER JOIN
-- [ ] Module 8 — LEFT & RIGHT JOIN *(next)*
+- [ ] Module 8 — LEFT JOIN *(in progress)*
 - [ ] Module 9 — Subqueries
-- [ ] Module 10 — CASE Expressions
-- [ ] Module 11 — Common Table Expressions (CTE)
-- [ ] Module 12 — Window Functions
-- [ ] Module 13 — Data Modification (INSERT, UPDATE, DELETE)
-- [ ] Module 14 — Final Project
+- [ ] Module 10 — Final Project
 
 ## ✅ Completed Topics
 
@@ -30,8 +26,8 @@
 - WHERE
 - AND / OR
 - IN / NOT IN
-- BETWEEN
-- LIKE
+- BETWEEN / NOT BETWEEN
+- LIKE / NOT LIKE
 - ORDER BY
 - LIMIT
 - COUNT()
@@ -39,6 +35,20 @@
 - AVG()
 - MIN()
 - MAX()
+- Aggregate Functions
 - GROUP BY
 - HAVING
 - INNER JOIN
+
+## 🔄 Current Topic
+
+- LEFT JOIN
+
+## 🏆 Milestones
+
+- ✅ 200+ SQL exercises completed
+- ✅ SQL Fundamentals completed
+- ✅ Aggregate Functions mastered
+- ✅ GROUP BY & HAVING completed
+- ✅ INNER JOIN completed
+- 🔄 LEFT JOIN in progress

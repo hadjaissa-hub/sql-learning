@@ -81,3 +81,21 @@ INNER JOIN departments d
     ON e.department_id = d.id
 GROUP BY d.department_name;
 ```
+
+
+LEFT JOIN
+Возвращает:
+все строки из левой таблицы;
+совпадения из правой таблицы;
+если совпадения нет — будут значения NULL.
+SELECT
+    e.first_name,
+    d.department_name
+FROM employees e
+LEFT JOIN departments d
+ON e.department_id = d.id;
+Результат:
+first_name	department_name
+Alex	IT
+John	HR
+Kate	NULL

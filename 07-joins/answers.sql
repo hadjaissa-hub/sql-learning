@@ -389,3 +389,215 @@ FROM employees e
 INNER JOIN departments d
 ON e.department_id = d.id
 HAVING AVG(e.salary) > 4500;
+
+
+🟢 Базовые задачи
+Используй две таблицы:
+employees
+id
+first_name
+last_name
+age
+salary
+department_id
+departments
+id
+department_name
+Задача 1
+Вывести:
+имя сотрудника;
+название отдела.
+Использовать LEFT JOIN.
+Задача 2
+Вывести:
+имя;
+фамилию;
+название отдела.
+Использовать LEFT JOIN.
+Задача 3
+Вывести:
+имя;
+зарплату;
+название отдела.
+Использовать LEFT JOIN.
+Задача 4
+Вывести все столбцы сотрудников и название отдела.
+Задача 5
+Вывести:
+имя;
+возраст;
+название отдела.
+🔵 Практические задачи
+Задача 6
+Показать всех сотрудников старше 30 лет.
+Даже если отдел отсутствует.
+Вывести:
+имя;
+возраст;
+название отдела.
+Задача 7
+Показать сотрудников с зарплатой больше 4000.
+Вывести:
+имя;
+зарплату;
+название отдела.
+Задача 8
+Показать всех сотрудников.
+Отсортировать по имени.
+Задача 9
+Показать всех сотрудников.
+Отсортировать по названию отдела.
+⭐ Задача 10
+Показать сотрудников отделов:
+IT;
+HR;
+Но если у сотрудника нет отдела (NULL), он тоже должен попасть в результат.
+Подсказка:
+WHERE d.department_name IN ('IT', 'HR')
+   OR d.department_name IS NULL
+💼 Собеседование
+Задача A
+Вывести список всех сотрудников вместе с отделами.
+Если отдела нет — сотрудник всё равно должен отображаться.
+Задача B
+Найти сотрудников, у которых нет отдела.
+Подсказка:
+WHERE d.id IS NULL
+
+Задача 1
+SELECT 
+             e.first_name,
+             d.department_name
+FROM employees e
+LEFT JOIN departments d
+ON e.department_id = d.id ;
+
+Задача 2
+SELECT 
+             e.first_name, 
+             e.last_name,
+             d.department_name
+FROM employees e
+LEFT JOIN departments d
+ON e.department_id = d.id ;
+
+Задача 3
+SELECT 
+             e.first_name,
+             e.salary,
+             d.department_name
+FROM employees e
+LEFT JOIN departments d
+ON e.department_id = d.id;
+
+Задача 4
+SELECT
+               e.id,
+               e.first_name,
+               e.last_name,
+               e.age,
+               e.salary,
+               e.department_id,
+               d.department_name
+FROM employees e
+LEFT JOIN departments d
+ON e.department_id = d.id;
+             
+Задача 5
+SELECT 
+             e.first_name,
+             e.age,
+             d.department_name
+FROM employees
+LEFT JOIN departments d
+ON e.department_id = d.id;
+
+Задача 6
+SELECT 
+             e.first_name,
+             e.age,
+             d.department_name
+FROM employees e
+LEFT JOIN departments d
+ON e.department_id = d.id
+WHERE e.age > 30;
+
+Задача 7
+SELECT 
+              e.first_name,
+              e.salary,
+              d.department_name
+FROM employees e
+LEFT JOIN departments d
+WHERE e.salary > 4000;
+
+Задача 8
+SELECT 
+             SELECT
+               e.id,
+               e.first_name,
+               e.last_name,
+               e.age,
+               e.salary,
+               e.department_id,
+               d.department_name
+FROM employees e
+LEFT JOIN departments d
+ON e.department_id = d.id
+ORDER BY e.first_name ASC;
+
+Задача 9
+SELECT 
+               e.id,
+               e.first_name,
+               e.last_name,
+               e.age,
+               e.salary,
+               e.department_id,
+               d.department_name
+FROM employees e
+LEFT JOIN departments d
+ON e.department_id = d.id
+ORDER BY d.department_name ASC;
+
+Задача 10
+SELECT 
+               e.id,
+               e.first_name,
+               e.last_name,
+               e.age,
+               e.salary,
+               e.department_id,
+               d.department_name
+FROM employees e
+LEFT JOIN departments d
+ON e.department_id = d.id
+WHERE d.department_name IN ('IT', 'HR')
+OR d.department_name IS NULL;
+
+Задача A
+SELECT 
+               e.id,
+               e.first_name,
+               e.last_name,
+               e.age,
+               e.salary,
+               e.department_id,
+               d.department_name
+FROM employees e
+LEFT JOIN departments d
+ON e.department_id = d.id;
+
+Задача B
+SELECT 
+               e.id,
+               e.first_name,
+               e.last_name,
+               e.age,
+               e.salary,
+               e.department_id,
+               d.department_name
+FROM employees e
+LEFT JOIN departments d
+ON e.department_id = d.id
+WHERE e.department_id IS NULL;
