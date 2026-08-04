@@ -2,10 +2,10 @@
 
 ## 📈 Progress
 
-- Overall Progress: **84%**
+- Overall Progress: **89%**
 - Current Level: 🟢 Strong Junior SQL
-- Exercises Solved: **274+**
-- Average Accuracy: **≈96%**
+- Exercises Solved: **298+**
+- Average Accuracy: **≈96–97%**
 
 ---
 
@@ -18,7 +18,7 @@
 - [x] Module 5 — Aggregate Functions
 - [x] Module 6 — GROUP BY & HAVING
 - [x] Module 7 — JOIN
-- [ ] Module 8 — Subqueries *(in progress)*
+- [ ] Module 8 — Subqueries *(in progress — Scalar Subqueries & IN)*
 - [ ] Module 9 — Common Table Expressions (CTE)
 - [ ] Module 10 — Window Functions
 - [ ] Module 11 — Data Modification (INSERT, UPDATE, DELETE)
@@ -30,8 +30,10 @@
 
 - SELECT
 - WHERE
+- DISTINCT
 - AND / OR
 - IN
+- NOT IN
 - BETWEEN
 - LIKE
 - ORDER BY
@@ -48,12 +50,15 @@
 - RIGHT JOIN
 - Multi-table JOINs
 - COUNT(DISTINCT)
+- Scalar Subqueries
+- Subqueries with `IN`
 
 ---
 
 ## 🎯 Current Focus
 
-- Subqueries
+- EXISTS
+- Correlated Subqueries
 - Advanced SQL Interview Problems
 - Analytical SQL
 
@@ -61,7 +66,9 @@
 
 ## 📊 Statistics
 
-- 📚 274+ solved SQL exercises
-- 🎯 Average accuracy: ≈96%
+- 📚 298+ solved SQL exercises
+- 🎯 Average accuracy: ≈96–97%
 - 💼 Real-world JOIN practice
+- 🔍 Subqueries with `=` and `IN`
 - 📈 Analytical SQL queries
+- ⭐ Lesson summaries (`lessons/`) for long-term review
