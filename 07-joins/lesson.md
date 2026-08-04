@@ -10,6 +10,14 @@ ORDER BY
 LIMIT
 ## Урок: INNER JOIN + GROUP BY
 
+Запомни шаблон:
+Это классический шаблон поиска отсутствующих данных.
+SELECT ...
+FROM table1 t1
+LEFT JOIN table2 t2
+ON t1.id = t2.table1_id
+WHERE t2.id IS NULL;
+
 ### Что изучаем
 
 До этого мы группировали данные внутри одной таблицы.
