@@ -1,124 +1,164 @@
 🟢 Базовые задачи
 Задача 1
-Найти сотрудников, у которых зарплата выше средней.
+Вывести:
+имя;
+зарплату;
+среднюю зарплату компании.
 Задача 2
-Найти сотрудников с максимальной зарплатой.
+Вывести:
+имя;
+зарплату;
+максимальную зарплату компании.
 Задача 3
-Найти сотрудников с минимальной зарплатой.
+Вывести:
+имя;
+зарплату;
+минимальную зарплату компании.
 Задача 4
-Найти сотрудников старше среднего возраста.
+Вывести:
+имя;
+возраст;
+средний возраст сотрудников.
 Задача 5
-Найти сотрудников младше среднего возраста.
+Вывести:
+имя;
+количество сотрудников в компании.
 🔵 Практические задачи
 Задача 6
-Найти сотрудников, которые работают в отделе IT, используя подзапрос.
+Вывести:
+имя;
+зарплату;
+общую сумму зарплат компании.
 Задача 7
-Найти сотрудников, которые работают в отделе HR, используя подзапрос.
+Вывести:
+имя;
+возраст;
+максимальный возраст сотрудников.
 Задача 8
-Найти сотрудников с зарплатой выше средней и возрастом больше среднего.
+Вывести:
+имя;
+зарплату;
+среднюю зарплату;
+максимальную зарплату.
 Задача 9
-Найти сотрудников с максимальной зарплатой и возрастом больше 30 лет.
+Вывести:
+имя;
+зарплату;
+среднюю зарплату.
+Показать только сотрудников с зарплатой выше 4000.
 ⭐ Задача 10
-Найти сотрудников:
-с зарплатой выше средней;
-работающих в отделе IT (через подзапрос).
+Вывести:
+имя;
+возраст;
+зарплату;
+средний возраст компании;
+среднюю зарплату компании;
+максимальную зарплату компании.
 💼 Реальные задачи
 Задача A
-Найти сотрудников с зарплатой ниже средней.
+Для каждого сотрудника показать:
+имя;
+зарплату;
+сумму всех зарплат компании;
+количество сотрудников.
 Задача B
-Найти сотрудников, которые работают в отделе Sales, используя подзапрос.
+Вывести:
+имя;
+зарплату;
+минимальную;
+среднюю;
+максимальную зарплату компании.
+
 
 Задача 1
-SELECT *,
-FROM employees
-WHERE salary > (
-                                SELECT AVG(salary)
-                                 FROM employees);
+SELECT 
+              first_name,
+              salary,
+              AVG(salary) OVER() AS company_average_salary
+FROM employees;
 
 Задача 2
-SELECT *
-FROM employees
-WHERE salary = (
-                                SELECT MAX(salary)
-                                 FROM employees);
+SELECT 
+             first_name,
+             salary,
+            MAX(salary) OVER() AS company_highest_salary
+FROM employees;
 
 Задача 3
-SELECT *
-FROM employees
-WHERE salary = (
-                                SELECT MIN(salary)
-                               FROM employees);
+SELECT
+             first_name,
+             salary,
+            MIN(salary) OVER() AS company_minimum_salary
+FROM employees;
+ 
 
 Задача 4
-SELECT *
-FROM employees
-WHERE age > (
-                           SELECT AVG(age)
-                           FROM employees);
+SELECT
+             first_name,
+             age,
+             AVG(age) OVER() AS company_average_age
+FROM employees;
 
 Задача 5
-SELECT *
-FROM employees
-WHERE age < (
-                           SELECT AVG(age)
-                           FROM employees);
+SELECT 
+             first_name;
+             COUNT(*) OVER() AS company_total_employees
+FROM employees;
 
 Задача 6
-SELECT *
-FROM employees
-WHERE department_id = (
-                                                 SELECT id
-                                                  FROM departments
-                                                   WHERE department_name = 'IT');
+SELECT
+             first_name,
+             salary,
+             SUM(salary) OVER() AS company_total_salary
+FROM employees;
 
 Задача 7
-SELECT *
-FROM employees
-WHERE department_id = (
-                                                 SELECT id
-                                                 FROM departments
-                                                 WHERE department_name = 'HR');
+SELECT
+             first_name,
+             age,
+            MAX(age) OVER() AS compnay_highest_age
+FROM employees;
 
 Задача 8
-SELECT *
-FROM employees
-WHERE salary > (
-                                SELECT AVG(salary)
-                                FROM employees)
-AND age > (
-                       SELECT AVG(age)
-                        FROM employees);
+SELECT 
+             first_name,
+             salary,
+             AVG(salary) OVER() AS company_average_salary,
+            MAX(salary) OVER() AS company_highest_salary
+FROM employees;
 
 Задача 9
-SELECT *
+SELECT 
+             first_name,
+             salary,
+             AVG(salary) OVER() AS company_average_salary
 FROM employees
-WHERE salary = (
-                               SELECT MAX(salary)
-                               FROM employees)
-AND age > 30;
+WHERE salary > 4000;
+
 
 Задача 10
-SELECT *
-FROM employees
-WHERE salary > (
-                               SELECT AVG(salary)
-                               FROM employees)
-AND department_id = (
-                                           SELECT id 
-                                           FROM departments
-                                           WHERE department_name = 'IT';
+SELECT
+             first_name,
+             age,
+             salary,
+             AVG(age) OVER() AS company_average_age, 
+             AVG(salary) OVER() AS company_average_salary,
+            MAX(salary) OVER() AS company_highest_salary
+FROM employees;
 
 Задача A
-SELECT *
-FROM employees
-WHERE salary < (
-                               SELECT AVG(salary)
-                                FROM employees);
+SELECT 
+             first_name,
+             salary,
+             SUM(salary) OVER() AS company_total_salary,
+             COUNT(*) OVER() AS company_total_employees
+FROM employees;
 
 Задача B
-SELECT *
-FROM employees
-WHERE department_id = (
-                                                 SELECT id
-                                                 FROM departments
-                                                 WHERE department_name = 'Sales');
+SELECT
+             first_name,
+             salary,
+             MIN(salary) OVER() AS company_lowest_salary,
+             AVG(salary) OVER() AS company_average_salary,
+             MAX(salary) OVER() AS company_highest_salary
+FROM employees;

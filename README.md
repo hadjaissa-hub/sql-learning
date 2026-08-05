@@ -2,10 +2,10 @@
 
 ## 📈 Progress
 
-- Overall Progress: **93%**
+- Overall Progress: **95%**
 - Current Level: 🟢 Strong Junior SQL
-- Exercises Solved: **322+**
-- Average Accuracy: **≈96%**
+- Exercises Solved: **334+**
+- Average Accuracy: **≈97%**
 
 ---
 
@@ -19,7 +19,7 @@
 - [x] Module 6 — GROUP BY & HAVING
 - [x] Module 7 — JOIN
 - [x] Module 8 — Subqueries
-- [ ] Module 9 — Window Functions *(next)*
+- [ ] Module 9 — Window Functions *(OVER() completed, PARTITION BY next)*
 - [ ] Module 10 — Common Table Expressions (CTE)
 - [ ] Module 11 — Data Modification (INSERT, UPDATE, DELETE)
 - [ ] Module 12 — Final SQL Project
@@ -54,45 +54,47 @@
 - LEFT JOIN
 - RIGHT JOIN
 - Multi-table JOINs
-- Finding missing data with JOINs
+- Finding missing data
 
 ### Subqueries
-- Scalar Subqueries (`=`)
-- Subqueries with `IN`
-- EXISTS
-- NOT EXISTS
+- Scalar Subqueries
+- IN
+- EXISTS / NOT EXISTS
 - Correlated Subqueries
+
+### Window Functions
+- OVER()
+- Aggregate Window Functions
 
 ---
 
 ## 🎯 Current Focus
 
-- Window Functions (`OVER`)
-- ROW_NUMBER()
-- RANK() / DENSE_RANK()
 - PARTITION BY
+- ROW_NUMBER()
+- RANK()
+- DENSE_RANK()
 - LAG() / LEAD()
-- Advanced SQL Interview Problems
 
 ---
 
 ## 📊 Statistics
 
-- 📚 322+ solved SQL exercises
-- 🎯 Average accuracy: ≈96%
+- 📚 334+ solved SQL exercises
+- 🎯 Average accuracy: ≈97%
 - 💼 Real-world JOIN practice
-- 🔍 Scalar, `IN`, `EXISTS` and Correlated Subqueries
-- 📈 Analytical SQL queries
+- 🔍 Advanced Subqueries
+- 📈 Window Functions (`OVER()`)
 - 📝 Lesson summaries in `lessons/`
-- 🚀 Ready to begin Window Functions
 
 ---
 
 ## 🏆 Milestones
 
-- ✅ Completed SQL Fundamentals
-- ✅ Completed Aggregation
-- ✅ Completed GROUP BY & HAVING
-- ✅ Completed JOINs
-- ✅ Completed Subqueries
-- 🎯 Next Milestone: Master Window Functions
+- ✅ SQL Fundamentals
+- ✅ Aggregation
+- ✅ GROUP BY & HAVING
+- ✅ JOINs
+- ✅ Subqueries
+- ✅ Window Functions — OVER()
+- 🎯 Next milestone: PARTITION BY
