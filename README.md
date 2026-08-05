@@ -2,9 +2,9 @@
 
 ## 📈 Progress
 
-- Overall Progress: **95%**
+- Overall Progress: **97%**
 - Current Level: 🟢 Strong Junior SQL
-- Exercises Solved: **334+**
+- Exercises Solved: **346+**
 - Average Accuracy: **≈97%**
 
 ---
@@ -19,7 +19,7 @@
 - [x] Module 6 — GROUP BY & HAVING
 - [x] Module 7 — JOIN
 - [x] Module 8 — Subqueries
-- [ ] Module 9 — Window Functions *(OVER() completed, PARTITION BY next)*
+- [ ] Module 9 — Window Functions *(OVER() & PARTITION BY completed)*
 - [ ] Module 10 — Common Table Expressions (CTE)
 - [ ] Module 11 — Data Modification (INSERT, UPDATE, DELETE)
 - [ ] Module 12 — Final SQL Project
@@ -54,7 +54,6 @@
 - LEFT JOIN
 - RIGHT JOIN
 - Multi-table JOINs
-- Finding missing data
 
 ### Subqueries
 - Scalar Subqueries
@@ -64,27 +63,28 @@
 
 ### Window Functions
 - OVER()
+- PARTITION BY
 - Aggregate Window Functions
 
 ---
 
 ## 🎯 Current Focus
 
-- PARTITION BY
 - ROW_NUMBER()
 - RANK()
 - DENSE_RANK()
 - LAG() / LEAD()
+- Advanced Analytical SQL
 
 ---
 
 ## 📊 Statistics
 
-- 📚 334+ solved SQL exercises
+- 📚 346+ solved SQL exercises
 - 🎯 Average accuracy: ≈97%
 - 💼 Real-world JOIN practice
 - 🔍 Advanced Subqueries
-- 📈 Window Functions (`OVER()`)
+- 📈 Window Functions
 - 📝 Lesson summaries in `lessons/`
 
 ---
@@ -93,8 +93,8 @@
 
 - ✅ SQL Fundamentals
 - ✅ Aggregation
-- ✅ GROUP BY & HAVING
 - ✅ JOINs
 - ✅ Subqueries
-- ✅ Window Functions — OVER()
-- 🎯 Next milestone: PARTITION BY
+- ✅ OVER()
+- ✅ PARTITION BY
+- 🎯 Next milestone: Ranking Functions
