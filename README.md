@@ -2,10 +2,10 @@
 
 ## 📈 Progress
 
-- Overall Progress: **90%**
+- Overall Progress: **93%**
 - Current Level: 🟢 Strong Junior SQL
-- Exercises Solved: **310+**
-- Average Accuracy: **≈95–96%**
+- Exercises Solved: **322+**
+- Average Accuracy: **≈96%**
 
 ---
 
@@ -18,9 +18,9 @@
 - [x] Module 5 — Aggregate Functions
 - [x] Module 6 — GROUP BY & HAVING
 - [x] Module 7 — JOIN
-- [ ] Module 8 — Subqueries *(in progress — Scalar, IN, EXISTS)*
-- [ ] Module 9 — Common Table Expressions (CTE)
-- [ ] Module 10 — Window Functions
+- [x] Module 8 — Subqueries
+- [ ] Module 9 — Window Functions *(next)*
+- [ ] Module 10 — Common Table Expressions (CTE)
 - [ ] Module 11 — Data Modification (INSERT, UPDATE, DELETE)
 - [ ] Module 12 — Final SQL Project
 
@@ -28,11 +28,10 @@
 
 ## ✅ Skills
 
-### SQL Fundamentals
-
+### Core SQL
 - SELECT
-- WHERE
 - DISTINCT
+- WHERE
 - AND / OR
 - IN / NOT IN
 - BETWEEN
@@ -40,65 +39,60 @@
 - ORDER BY
 - LIMIT
 
-### Aggregate Functions
-
+### Aggregation
 - COUNT
 - SUM
 - AVG
 - MIN
 - MAX
-
-### Grouping
-
 - GROUP BY
 - HAVING
+- COUNT(DISTINCT)
 
 ### JOINs
-
 - INNER JOIN
 - LEFT JOIN
 - RIGHT JOIN
 - Multi-table JOINs
-- COUNT(DISTINCT)
+- Finding missing data with JOINs
 
 ### Subqueries
-
 - Scalar Subqueries (`=`)
 - Subqueries with `IN`
 - EXISTS
 - NOT EXISTS
-- Basic Correlated Subqueries
+- Correlated Subqueries
 
 ---
 
 ## 🎯 Current Focus
 
-- Correlated Subqueries
-- Advanced EXISTS Patterns
-- SQL Interview Problems
-- Analytical SQL
+- Window Functions (`OVER`)
+- ROW_NUMBER()
+- RANK() / DENSE_RANK()
+- PARTITION BY
+- LAG() / LEAD()
+- Advanced SQL Interview Problems
 
 ---
 
 ## 📊 Statistics
 
-- 📚 310+ solved SQL exercises
-- 🎯 Average accuracy: ≈95–96%
+- 📚 322+ solved SQL exercises
+- 🎯 Average accuracy: ≈96%
 - 💼 Real-world JOIN practice
-- 🔍 Scalar, `IN` and `EXISTS` subqueries
+- 🔍 Scalar, `IN`, `EXISTS` and Correlated Subqueries
 - 📈 Analytical SQL queries
-- ⭐ Lesson summaries (`lessons/`) for long-term review
+- 📝 Lesson summaries in `lessons/`
+- 🚀 Ready to begin Window Functions
 
 ---
 
-## 🚀 Roadmap
+## 🏆 Milestones
 
-```text
-███████████████████████░ 90%
-```
-
-**Current Module:** Module 8 — Subqueries
-
-**Last Completed Lesson:** ✅ EXISTS
-
-**Next Lesson:** ➡️ Correlated Subqueries
+- ✅ Completed SQL Fundamentals
+- ✅ Completed Aggregation
+- ✅ Completed GROUP BY & HAVING
+- ✅ Completed JOINs
+- ✅ Completed Subqueries
+- 🎯 Next Milestone: Master Window Functions

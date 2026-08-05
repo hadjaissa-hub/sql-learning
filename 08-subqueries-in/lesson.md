@@ -240,3 +240,26 @@ c.parent_id = p.id
 2. Выполняем внутренний запрос только для неё.
 3. Если найдена хотя бы одна строка — условие истинно.
 4. Переходим к следующей строке.
+
+
+### Correlated subqueries
+Найти сотрудников с максимальной зарплатой в своем отделе.
+SELECT *
+FROM employees e
+WHERE salary =
+(
+    SELECT MAX(salary)
+    FROM employees
+    WHERE department_id = e.department_id
+);
+
+
+Найти самых молодых сотрудников каждого отдела.
+SELECT *
+FROM employees e
+WHERE age =
+(
+    SELECT MIN(age)
+    FROM employees
+    WHERE department_id = e.department_id
+);
