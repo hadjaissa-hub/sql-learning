@@ -136,3 +136,107 @@ WHERE department_id IN (
     WHERE department_name IN ('IT', 'HR')
 );
 ```
+# Lesson 17 — EXISTS & Correlated Subqueries
+
+## 📌 Что изучили
+
+`EXISTS` проверяет не значение, а **существование хотя бы одной строки**.
+
+Если подзапрос вернул хотя бы одну строку → `EXISTS = TRUE`.
+
+Если не вернул ни одной → `EXISTS = FALSE`.
+
+---
+
+## EXISTS
+
+Пример:
+
+```sql
+SELECT *
+FROM departments d
+WHERE EXISTS (
+    SELECT 1
+    FROM employees e
+    WHERE e.department_id = d.id
+);
+```
+
+Вернуть отделы, в которых есть сотрудники.
+
+---
+
+## NOT EXISTS
+
+```sql
+SELECT *
+FROM departments d
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM employees e
+    WHERE e.department_id = d.id
+);
+```
+
+Вернуть отделы, в которых нет сотрудников.
+
+---
+
+# Что такое коррелированный подзапрос
+
+Главная особенность:
+
+Внутренний запрос использует данные внешнего запроса.
+
+Например:
+
+```sql
+SELECT *
+FROM departments d
+WHERE EXISTS (
+    SELECT 1
+    FROM employees e
+    WHERE e.department_id = d.id
+);
+```
+
+Здесь
+
+```sql
+d.id
+```
+
+принадлежит внешнему запросу.
+
+Поэтому внутренний запрос выполняется отдельно для каждой строки таблицы `departments`.
+
+---
+
+## Главный шаблон
+
+```sql
+SELECT ...
+FROM parent p
+WHERE EXISTS (
+    SELECT 1
+    FROM child c
+    WHERE c.parent_id = p.id
+);
+```
+
+Именно строка
+
+```sql
+c.parent_id = p.id
+```
+
+делает подзапрос коррелированным.
+
+---
+
+## Алгоритм
+
+1. Выбираем строку внешнего запроса.
+2. Выполняем внутренний запрос только для неё.
+3. Если найдена хотя бы одна строка — условие истинно.
+4. Переходим к следующей строке.
