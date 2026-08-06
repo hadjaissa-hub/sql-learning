@@ -38,3 +38,46 @@ COUNT(*) OVER(PARTITION BY department_id)
 ```
 
 ---
+
+# Lesson 11 — ROW_NUMBER()
+
+## 🎯 Goal
+
+Learn how to assign a unique sequential number to every row within a sorted result set.
+
+---
+
+## 🧠 Key Idea
+
+`ROW_NUMBER()` gives every row its own unique position.
+
+Even if two rows have the same value, their row numbers are always different.
+
+Example:
+
+```sql
+ROW_NUMBER() OVER(
+    ORDER BY salary DESC
+)
+```
+
+---
+
+## 📌 Syntax
+
+```sql
+ROW_NUMBER() OVER(
+    ORDER BY column
+)
+```
+
+Within groups:
+
+```sql
+ROW_NUMBER() OVER(
+    PARTITION BY department_id
+    ORDER BY salary DESC
+)
+```
+
+---

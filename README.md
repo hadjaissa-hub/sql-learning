@@ -2,9 +2,9 @@
 
 ## 📈 Progress
 
-- Overall Progress: **97%**
+- Overall Progress: **98%**
 - Current Level: 🟢 Strong Junior SQL
-- Exercises Solved: **346+**
+- Exercises Solved: **358+**
 - Average Accuracy: **≈97%**
 
 ---
@@ -19,7 +19,7 @@
 - [x] Module 6 — GROUP BY & HAVING
 - [x] Module 7 — JOIN
 - [x] Module 8 — Subqueries
-- [ ] Module 9 — Window Functions *(OVER() & PARTITION BY completed)*
+- [ ] Module 9 — Window Functions *(OVER(), PARTITION BY, ROW_NUMBER() completed)*
 - [ ] Module 10 — Common Table Expressions (CTE)
 - [ ] Module 11 — Data Modification (INSERT, UPDATE, DELETE)
 - [ ] Module 12 — Final SQL Project
@@ -64,23 +64,23 @@
 ### Window Functions
 - OVER()
 - PARTITION BY
-- Aggregate Window Functions
+- ROW_NUMBER()
 
 ---
 
 ## 🎯 Current Focus
 
-- ROW_NUMBER()
 - RANK()
 - DENSE_RANK()
 - LAG() / LEAD()
+- Running Totals
 - Advanced Analytical SQL
 
 ---
 
 ## 📊 Statistics
 
-- 📚 346+ solved SQL exercises
+- 📚 358+ solved SQL exercises
 - 🎯 Average accuracy: ≈97%
 - 💼 Real-world JOIN practice
 - 🔍 Advanced Subqueries
@@ -97,4 +97,5 @@
 - ✅ Subqueries
 - ✅ OVER()
 - ✅ PARTITION BY
+- ✅ ROW_NUMBER()
 - 🎯 Next milestone: Ranking Functions

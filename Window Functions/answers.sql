@@ -187,3 +187,162 @@ SELECT
 FROM employees;
 
 
+🟢 Базовые задачи
+Задача 1
+Вывести:
+имя;
+зарплату;
+порядковый номер по зарплате (от большей к меньшей).
+Задача 2
+Вывести:
+имя;
+отдел;
+зарплату;
+порядковый номер внутри отдела по зарплате.
+Задача 3
+Вывести:
+имя;
+возраст;
+порядковый номер по возрасту (от младшего к старшему).
+Задача 4
+Вывести:
+имя;
+отдел;
+возраст;
+порядковый номер внутри отдела по возрасту.
+Задача 5
+Вывести:
+имя;
+зарплату;
+порядковый номер по зарплате (от меньшей к большей).
+🔵 Практические задачи
+Задача 6
+Получить только сотрудников с номером 1 по зарплате в каждом отделе.
+Задача 7
+Получить только сотрудников с номером 2 по зарплате в каждом отделе.
+Задача 8
+Получить двух самых высокооплачиваемых сотрудников каждого отдела.
+Задача 9
+Получить самого молодого сотрудника каждого отдела.
+⭐ Задача 10
+Получить трёх самых молодых сотрудников каждого отдела.
+💼 Реальные задачи
+Задача A
+Вывести всех сотрудников и их место по зарплате во всей компании.
+Задача B
+Вывести сотрудников, которые занимают первое место по возрасту в каждом отделе (самые молодые).
+
+Задача 1
+SELECT 
+              first_name,
+              salary,
+              ROW_NUMBER() OVER(ORDER BY salary DESC) AS rn
+FROM employees;
+
+Задача 2
+SELECT
+             first_name,
+             department_id,
+             salary,
+             ROW_NUMBER() OVER(PARTITION BY deparmtent_id 
+                                                           ORDER BY salary ASC) AS rn
+FROM employees;
+
+Задача 3
+SELECT 
+              first_name,
+              age,
+              ROW_NUMBER() OVER(ORDER BY age ASC) AS rn
+FROM employees;
+
+Задача 4
+SELECT 
+              first_name,
+              department_id,
+              age,
+              ROW_NUMBER() OVER(PARTITION BY age ASC) AS rn
+FROM employees,
+
+Задача 5
+SELECT
+             first_name,
+             salary,
+             ROW_NUMBER() OVER(ORDER BY salary ASC) AS rn
+FROM employees,
+
+Задача 6
+SELECT *
+FROM (
+              SELECT
+                            first_name,
+                            department_id,
+                            salary, 
+                            ROW_NUMBER() OVER(PARTITION BY department_id 
+                                                                         ORDER BY salary DESC) AS rn
+              FROM employees) t
+WHERE rn = 1;
+
+Задача 7
+SELECT *
+FROM (
+              SELECT
+                            first_name,
+                            department_id,
+                            salary,
+                            ROW_NUMBER() OVER(PARTITION BY department_id 
+                                                                          ORDER BY salary DESC) AS rn
+             FROM employees) t
+WHERE rn = 2;
+
+Задача 8
+SELECT *
+FROM (
+              SELECT 
+                            first_name,
+                            department_id,
+                            salary,
+                            ROW_NUMBER() OVER(PARTITION BY department_id                  
+                                                                         ORDER BY salary DESC) AS rn
+              FROM employees) t
+WHERE rn IN (1, 2);
+
+Задача 9
+SELECT *
+FROM (
+             SELECT 
+                          first_name, 
+                          depatment_id,
+                          salary,
+                          ROW_NUMBER() OVER(PARTITION BY department_id      ORDER BY age ASC) AS rn
+            FROM employees) t
+WHERE rn = 1; 
+
+Задача 10
+SELECT *
+FROM (
+              SELECT 
+                           first_name,
+                           department_id,
+                           salary,
+                           ROW_NUMBER() OVER(PARTITION BY department_id ORDER BY age ASC) AS rn
+              FROM employees) t
+WHERE rn IN (1, 2, 3);
+
+Задача A
+SELECT 
+              first_name,
+              department_id,
+              salary,
+              ROW_NUMBER() OVER(ORDER BY salary DESC) AS rn
+FROM employees;
+
+Задача B
+SELECT *
+FROM (
+              SELECT
+                            first_name,
+                            department_name,
+                            age,
+                            ROW_NUMBER() OVER (PARTITION BY department_id ORDER BY age ASC) AS rn
+              FROM employees) t
+WHERE rn = 1;
