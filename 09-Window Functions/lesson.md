@@ -81,3 +81,63 @@ ROW_NUMBER() OVER(
 ```
 
 ---
+Зарплата	ROW_NUMBER	RANK	DENSE_RANK
+5000	1	1	1
+5000	2	1	1
+4500	3	3	2
+4200	4	4	3
+
+# Window Functions — Ranking
+
+## Topics Covered
+
+- ROW_NUMBER()
+- RANK()
+- DENSE_RANK()
+
+---
+
+## ROW_NUMBER()
+
+Assigns a unique sequential number to every row.
+
+```sql
+ROW_NUMBER() OVER(
+    PARTITION BY department_id
+    ORDER BY salary DESC
+)
+```
+
+Use when every row must have its own position.
+
+---
+
+## RANK()
+
+Rows with equal values receive the same rank.
+
+Example:
+
+Salary | Rank
+------ | ----
+5000 | 1
+5000 | 1
+4500 | 3
+
+Notice that rank **2 is skipped**.
+
+---
+
+## DENSE_RANK()
+
+Rows with equal values receive the same rank.
+
+Example:
+
+Salary | Dense Rank
+------ | ----------
+5000 | 1
+5000 | 1
+4500 | 2
+
+No gaps appear.

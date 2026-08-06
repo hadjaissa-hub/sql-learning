@@ -2,9 +2,9 @@
 
 ## 📈 Progress
 
-- Overall Progress: **98%**
-- Current Level: 🟢 Strong Junior SQL
-- Exercises Solved: **358+**
+- Overall Progress: **99%**
+- Current Level: 🟢 Strong Junior SQL / Junior+
+- Exercises Solved: **370+**
 - Average Accuracy: **≈97%**
 
 ---
@@ -19,8 +19,8 @@
 - [x] Module 6 — GROUP BY & HAVING
 - [x] Module 7 — JOIN
 - [x] Module 8 — Subqueries
-- [ ] Module 9 — Window Functions *(OVER(), PARTITION BY, ROW_NUMBER() completed)*
-- [ ] Module 10 — Common Table Expressions (CTE)
+- [ ] Module 9 — Common Table Expressions (CTE)
+- [ ] Module 10 — Window Functions *(in progress)*
 - [ ] Module 11 — Data Modification (INSERT, UPDATE, DELETE)
 - [ ] Module 12 — Final SQL Project
 
@@ -28,10 +28,10 @@
 
 ## ✅ Skills
 
-### Core SQL
+### Querying
 - SELECT
-- DISTINCT
 - WHERE
+- DISTINCT
 - AND / OR
 - IN / NOT IN
 - BETWEEN
@@ -49,15 +49,16 @@
 - HAVING
 - COUNT(DISTINCT)
 
-### JOINs
+### Joins
 - INNER JOIN
 - LEFT JOIN
 - RIGHT JOIN
 - Multi-table JOINs
+- Finding missing data with JOINs
 
 ### Subqueries
 - Scalar Subqueries
-- IN
+- Subqueries with `IN`
 - EXISTS / NOT EXISTS
 - Correlated Subqueries
 
@@ -65,37 +66,27 @@
 - OVER()
 - PARTITION BY
 - ROW_NUMBER()
+- RANK()
+- DENSE_RANK()
 
 ---
 
 ## 🎯 Current Focus
 
-- RANK()
-- DENSE_RANK()
-- LAG() / LEAD()
+- LAG()
+- LEAD()
 - Running Totals
+- Moving Averages
 - Advanced Analytical SQL
 
 ---
 
 ## 📊 Statistics
 
-- 📚 358+ solved SQL exercises
+- 📚 370+ solved SQL exercises
 - 🎯 Average accuracy: ≈97%
 - 💼 Real-world JOIN practice
 - 🔍 Advanced Subqueries
-- 📈 Window Functions
-- 📝 Lesson summaries in `lessons/`
-
----
-
-## 🏆 Milestones
-
-- ✅ SQL Fundamentals
-- ✅ Aggregation
-- ✅ JOINs
-- ✅ Subqueries
-- ✅ OVER()
-- ✅ PARTITION BY
-- ✅ ROW_NUMBER()
-- 🎯 Next milestone: Ranking Functions
+- 🪟 Modern Window Functions
+- ⭐ Lesson summaries (`lessons/`)
+- 🚀 Preparing for Junior SQL interviews
