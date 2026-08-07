@@ -2,9 +2,9 @@
 
 ## 📈 Progress
 
-- Overall Progress: **99%**
-- Current Level: 🟢 Strong Junior SQL / Junior+
-- Exercises Solved: **370+**
+- Overall Progress: **100%**
+- Current Level: 🟢 Strong Junior SQL
+- Exercises Solved: **394+**
 - Average Accuracy: **≈97%**
 
 ---
@@ -19,8 +19,8 @@
 - [x] Module 6 — GROUP BY & HAVING
 - [x] Module 7 — JOIN
 - [x] Module 8 — Subqueries
-- [ ] Module 9 — Common Table Expressions (CTE)
-- [ ] Module 10 — Window Functions *(in progress)*
+- [x] Module 9 — Window Functions
+- [ ] Module 10 — Common Table Expressions (CTE)
 - [ ] Module 11 — Data Modification (INSERT, UPDATE, DELETE)
 - [ ] Module 12 — Final SQL Project
 
@@ -54,11 +54,10 @@
 - LEFT JOIN
 - RIGHT JOIN
 - Multi-table JOINs
-- Finding missing data with JOINs
 
 ### Subqueries
 - Scalar Subqueries
-- Subqueries with `IN`
+- IN Subqueries
 - EXISTS / NOT EXISTS
 - Correlated Subqueries
 
@@ -68,25 +67,31 @@
 - ROW_NUMBER()
 - RANK()
 - DENSE_RANK()
-
----
-
-## 🎯 Current Focus
-
 - LAG()
 - LEAD()
 - Running Totals
-- Moving Averages
-- Advanced Analytical SQL
+- Window Frames (`ROWS BETWEEN`)
+
+---
+
+## 🎯 Next Goals
+
+- Common Table Expressions (CTE)
+- Recursive CTEs
+- CASE
+- Date & Time Functions
+- String Functions
+- Views
+- Indexes & EXPLAIN
+- Real-world SQL Interview Problems
 
 ---
 
 ## 📊 Statistics
 
-- 📚 370+ solved SQL exercises
+- 📚 394+ solved SQL exercises
 - 🎯 Average accuracy: ≈97%
-- 💼 Real-world JOIN practice
-- 🔍 Advanced Subqueries
-- 🪟 Modern Window Functions
+- 🏆 Completed core SQL curriculum
+- 🪟 Advanced Window Functions
 - ⭐ Lesson summaries (`lessons/`)
-- 🚀 Preparing for Junior SQL interviews
+- 💼 Ready for Junior SQL interviews

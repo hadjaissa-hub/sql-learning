@@ -141,3 +141,59 @@ Salary | Dense Rank
 4500 | 2
 
 No gaps appear.
+
+# LAG() and LEAD()
+
+## Summary
+
+`LAG()` and `LEAD()` are window functions used to compare the current row with neighboring rows without using self joins.
+
+---
+
+## LAG()
+
+Returns the value from a previous row.
+
+```sql
+SELECT
+    first_name,
+    salary,
+    LAG(salary) OVER(
+        ORDER BY salary
+    ) AS previous_salary
+FROM employees;
+```
+
+---
+
+## LEAD()
+
+Returns the value from the next row.
+
+```sql
+SELECT
+    first_name,
+    salary,
+    LEAD(salary) OVER(
+        ORDER BY salary
+    ) AS next_salary
+FROM employees;
+```
+
+---
+
+## Using PARTITION BY
+
+Restart comparisons inside each department.
+
+```sql
+SELECT
+    first_name,
+    department_id,
+    salary,
+    LAG(salary) OVER(
+        PARTITION BY department_id
+        ORDER BY salary
+    ) AS previous_salary
+FROM employees;
+```
