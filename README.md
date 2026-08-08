@@ -38,6 +38,10 @@
 - LIKE
 - ORDER BY
 - LIMIT
+- INSERT INTO
+- INSERT multiple rows
+- INSERT with selected columns
+- NULL values
 
 ### Aggregation
 - COUNT
@@ -95,3 +99,5 @@
 - 🪟 Advanced Window Functions
 - ⭐ Lesson summaries (`lessons/`)
 - 💼 Ready for Junior SQL interviews
+- 🗄️ CREATE TABLE
+- ➕ INSERT INTO

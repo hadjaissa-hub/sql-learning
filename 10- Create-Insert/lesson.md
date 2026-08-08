@@ -21,3 +21,33 @@ CREATE TABLE students (
     age INT,
     email VARCHAR(100)
 );
+
+# INSERT
+Главный шаблон:
+
+INSERT INTO employees (
+    first_name,
+    last_name,
+    age,
+    salary,
+    department_id
+)
+VALUES (
+    'John',
+    'Smith',
+    30,
+    4500,
+    2
+);
+
+
+И для нескольких строк:
+
+INSERT INTO employees (
+    first_name,
+    salary
+)
+VALUES
+    ('Mike', 3500),
+    ('Anna', 4200),
+    ('John', 5000);

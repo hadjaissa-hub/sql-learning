@@ -76,3 +76,54 @@ CREATE TABLE books (
 	price NUMERIC(8,2) NOT NULL,
 	available BOOLEAN NOT NULL
 );
+
+
+
+Задача 1
+INSERT INTO employees (first_name, last_name, age, salary, department_id)
+VALUES ('John', 'Smith', 30, 4000, 1);
+
+Задача 2
+INSERT INTO employees (first_name, last_name, age, salary, department_id)
+VALUES ('Anna', 'Brown', 27, 4500, 2);
+
+Задача 3
+INSERT INTO employees (first_name, salary)
+VALUES ('Mike', 3500);
+
+Задача 4
+INSERT INTO employees (first_name, last_name, age, salary, department_id)
+VALUES ('Sarah', 'Wilson', 32, 5200, 3);
+
+Задача 5
+INSERT INTO employees (first_name, age, salary, department_id)
+VALUES ('Alex', 29, 3800, 1),
+	('Maria', 34, 4700, 2),
+	('David', 26, 3200, 3);
+
+Задача 6
+INSERT INTO employees (first_name, last_name, age, salary, department_id)
+VALUES ('Robert', 'Taylor', 41, 6000, 1);
+
+Задача 7
+INSERT INTO employees (first_name, age, salary)
+VALUES ('Emma', 25, 3600);
+
+Задача 8
+INSERT INTO employees (first_name, age, salary, department_id)
+VALUES
+	('Daniel', 31, 4300, 2),
+	('Olivia', 28, 3900, 1)
+;
+
+Задача 9
+INSERT INTO employees (first_name, last_name, age, salary, department_id)
+VALUES ('James', 'Anderson', 36, 5500, 3);
+
+Задача 10
+INSERT INTO employees (first_name, age, salary, department_id)
+VALUES 
+	('Chris', 24, 3000, 1),
+	('Laura', 33, 4800, 2), 
+	('Kevin', 38, 5100, 3)
+;
