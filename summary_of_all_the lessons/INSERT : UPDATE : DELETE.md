@@ -1,21 +1,91 @@
-# 📚 SQL — INSERT / UPDATE / DELETE
+# 📚 SQL — CREATE DATABASE / CREATE TABLE / INSERT / UPDATE / DELETE
 
 ## 🎯 Что я изучил
 
-Ты изучил основные SQL-команды для **изменения данных в таблицах**:
+Ты изучил основные SQL-команды для **создания структуры базы данных и изменения данных в таблицах**:
 
-* `INSERT` — добавление новых строк;
+* `CREATE DATABASE` — создание базы данных;
+* `CREATE TABLE` — создание таблицы;
+* `INSERT INTO` — добавление новых строк;
 * `UPDATE` — изменение существующих строк;
 * `DELETE` — удаление строк.
-* `DELETE` — CREATE DATABASE
 
-Также ты научился использовать их вместе с **условиями и подзапросами**, в том числе `NOT EXISTS`.
+Также ты научился:
 
-> Важно: `SELECT` получает данные, а `INSERT`, `UPDATE` и `DELETE` изменяют данные.
+* задавать столбцы и их типы данных при создании таблицы;
+* использовать `PRIMARY KEY`;
+* вставлять одну и несколько строк;
+* изменять один или несколько столбцов;
+* изменять значения на процент;
+* удалять строки по условиям;
+* использовать подзапросы в `DELETE`;
+* использовать `NOT EXISTS` в `DELETE`.
+
+> Важно: `CREATE DATABASE` и `CREATE TABLE` создают **структуру**, а `INSERT`, `UPDATE` и `DELETE` работают непосредственно с **данными**.
 
 ---
 
 ## 🧠 Главные понятия
+
+### `CREATE DATABASE`
+
+Используется для **создания новой базы данных**.
+
+```sql
+CREATE DATABASE company;
+```
+
+После создания базы данных в ней можно создавать таблицы.
+
+---
+
+### `CREATE TABLE`
+
+Используется для **создания новой таблицы**.
+
+При создании таблицы мы указываем:
+
+* название таблицы;
+* названия столбцов;
+* типы данных;
+* ограничения (`PRIMARY KEY`, `NOT NULL` и т.д.).
+
+```sql
+CREATE TABLE employees (
+    employee_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50),
+    age INT,
+    salary NUMERIC(10, 2),
+    department_id INT
+);
+```
+
+---
+
+### Типы данных
+
+Тип данных определяет, **какие значения можно хранить в столбце**.
+
+| Тип            | Что хранит                                     |
+| -------------- | ---------------------------------------------- |
+| `INT`          | целые числа                                    |
+| `VARCHAR(n)`   | текст до `n` символов                          |
+| `NUMERIC(p,s)` | точные числа с десятичной частью               |
+| `SERIAL`       | автоматически увеличивающийся целочисленный ID |
+
+---
+
+### `PRIMARY KEY`
+
+Определяет столбец, который **уникально идентифицирует каждую строку**.
+
+```sql
+employee_id SERIAL PRIMARY KEY
+```
+
+Каждый сотрудник должен иметь уникальный `employee_id`.
+
+---
 
 ### `INSERT INTO`
 
@@ -31,7 +101,7 @@
 
 Можно изменить один или сразу несколько столбцов.
 
-```sql id="h7m2q4"
+```sql
 UPDATE employees
 SET salary = 4000
 WHERE employee_id = 1;
@@ -43,9 +113,7 @@ WHERE employee_id = 1;
 
 Используется для **удаления строк** из таблицы.
 
-Можно удалять строки по условию:
-
-```sql id="k4p8v1"
+```sql
 DELETE FROM employees
 WHERE age > 50;
 ```
@@ -58,7 +126,7 @@ WHERE age > 50;
 
 Особенно важно помнить:
 
-```sql id="r5n9c3"
+```sql
 UPDATE employees
 SET salary = 5000;
 ```
@@ -67,7 +135,7 @@ SET salary = 5000;
 
 И:
 
-```sql id="w2x6m8"
+```sql
 DELETE FROM employees;
 ```
 
@@ -77,16 +145,43 @@ DELETE FROM employees;
 
 ## 📝 Основной синтаксис
 
+### Создание базы данных
+
+```sql
+CREATE DATABASE database_name;
+```
+
+### Создание таблицы
+
+```sql
+CREATE TABLE table_name (
+    column1 data_type,
+    column2 data_type,
+    column3 data_type
+);
+```
+
+### Создание таблицы с `PRIMARY KEY`
+
+```sql
+CREATE TABLE employees (
+    employee_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50),
+    age INT,
+    salary NUMERIC(10, 2)
+);
+```
+
 ### Вставка одной строки
 
-```sql id="s8q3j6"
+```sql
 INSERT INTO table_name (column1, column2)
 VALUES (value1, value2);
 ```
 
 ### Вставка нескольких строк
 
-```sql id="p4v7k2"
+```sql
 INSERT INTO table_name (column1, column2)
 VALUES
     (value1, value2),
@@ -96,7 +191,7 @@ VALUES
 
 ### `UPDATE`
 
-```sql id="m6c9r4"
+```sql
 UPDATE table_name
 SET column1 = value1
 WHERE condition;
@@ -104,7 +199,7 @@ WHERE condition;
 
 ### Изменение нескольких столбцов
 
-```sql id="x3n8w5"
+```sql
 UPDATE employees
 SET
     salary = 5000,
@@ -114,7 +209,7 @@ WHERE employee_id = 1;
 
 ### `DELETE`
 
-```sql id="q7k2p9"
+```sql
 DELETE FROM table_name
 WHERE condition;
 ```
@@ -123,10 +218,22 @@ WHERE condition;
 
 ## 🔑 Важные команды / конструкции
 
+### Создание структуры
+
+* `CREATE DATABASE` — создаёт базу данных.
+* `CREATE TABLE` — создаёт таблицу.
+* `PRIMARY KEY` — уникально идентифицирует строку.
+* `SERIAL` — автоматически увеличивающийся числовой ID.
+* `VARCHAR` — хранит текст.
+* `INT` — хранит целые числа.
+* `NUMERIC` — хранит точные числовые значения.
+
+### Работа с данными
+
 * `INSERT INTO` — добавляет строки.
-* `VALUES` — задаёт значения для вставляемых строк.
-* `UPDATE` — изменяет существующие строки.
-* `SET` — указывает новые значения.
+* `VALUES` — задаёт значения.
+* `UPDATE` — изменяет строки.
+* `SET` — задаёт новые значения.
 * `DELETE FROM` — удаляет строки.
 * `WHERE` — определяет, какие строки затронуть.
 * `NOT EXISTS` — позволяет удалить строки, для которых не существует соответствия.
@@ -134,16 +241,16 @@ WHERE condition;
 
 ### Изменение значения на процент
 
-Чтобы увеличить зарплату, например, на `10%`:
+Увеличить зарплату на `10%`:
 
-```sql id="v5r1m7"
+```sql
 UPDATE employees
 SET salary = salary * 1.10;
 ```
 
 Уменьшить на `10%`:
 
-```sql id="d8q4n2"
+```sql
 UPDATE employees
 SET salary = salary * 0.90;
 ```
@@ -152,18 +259,41 @@ SET salary = salary * 0.90;
 
 ## 💡 Примеры
 
-### 1. Добавить одного сотрудника
+### 1. Создать базу данных
 
-```sql id="c6m3x8"
+```sql
+CREATE DATABASE company;
+```
+
+---
+
+### 2. Создать таблицу
+
+```sql
+CREATE TABLE employees (
+    employee_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    age INT,
+    salary NUMERIC(10, 2),
+    department_id INT
+);
+```
+
+---
+
+### 3. Добавить одного сотрудника
+
+```sql
 INSERT INTO employees (first_name, age, salary)
 VALUES ('John', 30, 4000);
 ```
 
 ---
 
-### 2. Добавить нескольких сотрудников
+### 4. Добавить нескольких сотрудников
 
-```sql id="n4p7s2"
+```sql
 INSERT INTO employees (first_name, age, salary)
 VALUES
     ('John', 30, 4000),
@@ -173,9 +303,9 @@ VALUES
 
 ---
 
-### 3. Изменить зарплату одного сотрудника
+### 5. Изменить зарплату одного сотрудника
 
-```sql id="j8v5q3"
+```sql
 UPDATE employees
 SET salary = 4500
 WHERE first_name = 'John';
@@ -183,9 +313,9 @@ WHERE first_name = 'John';
 
 ---
 
-### 4. Изменить несколько столбцов
+### 6. Изменить несколько столбцов
 
-```sql id="r2k6w9"
+```sql
 UPDATE employees
 SET
     salary = 5000,
@@ -195,9 +325,9 @@ WHERE employee_id = 1;
 
 ---
 
-### 5. Увеличить зарплату на 10%
+### 7. Увеличить зарплату на 10%
 
-```sql id="f7m4c1"
+```sql
 UPDATE employees
 SET salary = salary * 1.10
 WHERE department_id = 2;
@@ -207,9 +337,9 @@ WHERE department_id = 2;
 
 ---
 
-### 6. Удалить сотрудников по условию
+### 8. Удалить сотрудников по условию
 
-```sql id="t9q3n6"
+```sql
 DELETE FROM employees
 WHERE age > 50;
 ```
@@ -218,11 +348,11 @@ WHERE age > 50;
 
 ---
 
-### 7. `DELETE` с подзапросом
+### 9. `DELETE` с подзапросом
 
 Например, удалить сотрудников из отдела `IT`:
 
-```sql id="b5x8p2"
+```sql
 DELETE FROM employees
 WHERE department_id = (
     SELECT id
@@ -235,11 +365,11 @@ WHERE department_id = (
 
 ---
 
-### 8. `DELETE` с `NOT EXISTS`
+### 10. `DELETE` с `NOT EXISTS`
 
 Удалить сотрудников, для которых **нет соответствующего отдела**:
 
-```sql id="m3v7k4"
+```sql
 DELETE FROM employees e
 WHERE NOT EXISTS (
     SELECT 1
@@ -250,7 +380,7 @@ WHERE NOT EXISTS (
 
 Логика:
 
-```text id="q8c2n5"
+```text
 employees
     ↓
 проверяем department_id
@@ -264,17 +394,39 @@ employees
 
 ## 🔥 Главное, что нужно запомнить
 
-```text id="z4m6p8"
-INSERT → добавить данные
+```text
+CREATE DATABASE → создать базу данных
 
-UPDATE → изменить данные
+CREATE TABLE
+→ создать таблицу
 
-DELETE → удалить данные
+INSERT
+→ добавить данные
+
+UPDATE
+→ изменить данные
+
+DELETE
+→ удалить данные
+```
+
+Полная логика работы:
+
+```text
+DATABASE
+   ↓
+TABLE
+   ↓
+INSERT
+   ↓
+SELECT
+   ↓
+UPDATE / DELETE
 ```
 
 И особенно важно:
 
-```text id="y7n3c1"
+```text
 UPDATE + WHERE
 → изменить определённые строки
 
@@ -288,4 +440,6 @@ DELETE без WHERE
 → удалить ВСЕ строки
 ```
 
-`INSERT / UPDATE / DELETE` — это базовые **DML-команды (Data Manipulation Language)** для работы непосредственно с данными в таблицах.
+`CREATE DATABASE` и `CREATE TABLE` относятся к **DDL (Data Definition Language)** — они создают структуру базы данных.
+
+`INSERT`, `UPDATE` и `DELETE` относятся к **DML (Data Manipulation Language)** — они изменяют данные внутри этой структуры.
